@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/normalize.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <title>World's best burger</title>
+</head>
+
+<body>
+    <h1>World's Best burger</h1>
+
+    <p id="output"></p>
+
+</body>
+<script>
+    var output = document.getElementById('output').innerHTML;
+
+
+    function Toppings(bun, garnish, cheeses, sauces, patties, pattyOption, extraToppings) {
+
+        this.bun = bun;
+        this.garnish = garnish;
+        this.cheeses = cheeses;
+        this.sauces = sauces;
+        this.patties = patties;
+        this.pattyOption = pattyOption;
+        this.extraToppings = extraToppings;
+
+        this.selection = function () {
+            output.textContent = 'Your choice of' + this.bun + ' ' + this.garnish + ' ' + this.cheeses + ' ' + this.sauces + ' ' + this.patties + ' ' + this.pattyOption + ' ' + this.extraToppings + 'for your order to be placed' + '.';
+        }
+
+    }
+    var selection1 = new Toppings('plain bun', 'onions', 'monetary jack', 'mustard', 'beef', 'single', 'extra cheese');
+    var selection2 = new Toppings('ciabatta bun', 'tomatoes', 'brie', 'ketchup', 'beef', 'double', 'extra onions');
+    var selection3 = new Toppings('potato bun', 'lettuce', 'american cheddar', 'mayo', 'fish', 'single', 'extra cheese');
+    var selection4 = new Toppings('whole wheat', 'hot peppers', 'mozzarella', 'garlic mayo', 'chicken', 'triple', 'extra hot peppers');
+
+
+</script>
+
+</html>
